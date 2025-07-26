@@ -13,5 +13,5 @@ export default {
       title: 'UserId',
       type: 'string'
     },
-  ]
-}
+  ],
+};

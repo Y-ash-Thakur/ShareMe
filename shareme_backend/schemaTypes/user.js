@@ -4,8 +4,8 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'username',
-      title: 'Username',
+      name: 'userName',
+      title: 'UserName',
       type: 'string'
     },
     {
@@ -13,5 +13,10 @@ export default {
       title: 'Image',
       type: 'string'
     },
-  ]
-}
+  ],
+      preview:{
+        select: {
+          title: 'userName'
+        }
+      }
+};
