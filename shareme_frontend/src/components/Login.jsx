@@ -17,9 +17,6 @@ const Login = () => {
         // Extract needed data
         const { name, sub: googleId, picture: imageUrl } = decoded;
 
-        // Save user to localStorage
-        localStorage.setItem('user', JSON.stringify(decoded));
-
         // Create a sanity document
         const doc = {
           _id: googleId,
@@ -27,6 +24,9 @@ const Login = () => {
           userName: name,
           image: imageUrl
         }
+
+        // Save user to localStorage
+        localStorage.setItem('user', JSON.stringify(doc));
         
         client.createIfNotExists(doc).then(() => {
           navigate('/', {replace: true});
